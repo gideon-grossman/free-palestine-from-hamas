@@ -3,7 +3,7 @@ import {styled} from '@mui/material/styles';
 import LoopIcon from '@mui/icons-material/Loop';
 import ShareIcon from '@mui/icons-material/Share';
 const StyledButton = styled(Button)(() => ({
-   backgroundColor: 'black', borderRadius: '8px', color: 'white'}));
+   backgroundColor: 'black', borderRadius: '8px', height: '40px', padding: '16px', color: 'white'}));
 
    const Hashtag = () => (<Box sx={{border: '1px solid black', borderRadius: '8px', height: '40px', fontSize: '24px', display: 'flex', alignItems: 'center', justifyContent: 'center'}}>#freepalestine<b>fromhamas</b></Box>)
        
