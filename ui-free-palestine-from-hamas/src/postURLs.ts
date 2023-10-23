@@ -6,6 +6,7 @@ const posts = [
     'https://www.instagram.com/reel/CyigCyxN-pj',
     'https://www.instagram.com/p/Cykv_SEIBv1',
     // 'https://fb.watch/nSH6C7Ax5F',
+    'https://www.facebook.com/plugins/video.php?height=476&href=https%3A%2F%2Fwww.facebook.com%2FYosHaddad%2Fvideos%2F1112898499593655%2F&show_text=false&width=267&name_placeholder=0',
     // 'https://www.facebook.com/plugins/video.php?height=476&href=https%3A%2F%2Fwww.facebook.com%2FYosHaddad%2Fvideos%2F1112898499593655%2F&show_text=false&width=267&name_placeholder=3'
     // 'https://fb.watch/nPUeQR6YB1',
     // 'https://www.facebook.com/reel/300703919568856'
