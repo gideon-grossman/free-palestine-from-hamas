@@ -76,7 +76,7 @@ const Post = () => {
                 setNextText('הַבָּא');
                 setShareText('שתפו');
                 setChoosePlatformText('בחר פלטפורמה');
-                setChoosePlatformDesc('.בחר את פלטפורמת המדיה החברתית שבה תרצה לשתף את הפוסט הזה');
+                setChoosePlatformDesc('בחר את פלטפורמת המדיה החברתית שבה תרצה לשתף את הפוסט הזה');
                 break;
         }
     }, [language]);
