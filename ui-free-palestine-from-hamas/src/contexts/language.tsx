@@ -1,7 +1,7 @@
 import React, { createContext, useContext, useState, ReactNode } from 'react';
 
 // Define the type for your context
-export type LanguageT = 'עִב' | 'En';
+export type LanguageT = 'עִב' | 'En' | 'عربي';
 
 // Create a default value for the context
 const defaultLanguage: LanguageT = 'En';

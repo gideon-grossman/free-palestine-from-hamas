@@ -16,6 +16,9 @@ const HeaderText = () => {
                 setHeaderText('.הסכסוך הוא מסובך');
                 setHeaderSubtext('.טרור זה לא');
                 break;
+            case 'عربي':
+                setHeaderText('.الصراع معقد');
+                setHeaderSubtext('.الإرهاب ليس كذلك');
         }
     }, [language]);
 

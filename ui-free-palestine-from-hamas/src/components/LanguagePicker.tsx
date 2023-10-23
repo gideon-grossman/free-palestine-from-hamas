@@ -6,7 +6,8 @@ const LanguagePicker = () => {
     const { language, setLanguage } = useLanguage();
     const changeLanguage = () => {
         if (language === 'En') setLanguage('עִב');
-        else if (language === 'עִב') setLanguage('En');
+        else if (language === 'עִב') setLanguage('عربي');
+        else if (language === 'عربي') setLanguage('En');
     };
 
     return (

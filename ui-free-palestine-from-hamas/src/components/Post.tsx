@@ -52,8 +52,8 @@ const Hashtag = () => (
     </Box>
 );
 
-const EXAMPLE_IMG_URL =
-    'https://www.livemint.com/lm-img/img/2023/10/10/600x338/California-Israel-Palestinians-2_1696901506265_1696901545401.jpg';
+const EXAMPLE_IMG_URL = 'https://www.instagram.com/p/CygHf89IzuK';
+// 'https://www.livemint.com/lm-img/img/2023/10/10/600x338/California-Israel-Palestinians-2_1696901506265_1696901545401.jpg';
 const Post = () => {
     const { language } = useLanguage();
     const [shareModalOpen, setShareModalOpen] = useState<boolean>(false);
@@ -77,6 +77,14 @@ const Post = () => {
                 setShareText('שתפו');
                 setChoosePlatformText('בחר פלטפורמה');
                 setChoosePlatformDesc('בחר את פלטפורמת המדיה החברתית שבה תרצה לשתף את הפוסט הזה');
+                break;
+            case 'عربي':
+                setNextText('التالي');
+                setShareText('يشارك');
+                setChoosePlatformText('اختر منصة');
+                setChoosePlatformDesc(
+                    'اختر إحدى منصات التواصل الاجتماعي التي ترغب في مشاركة هذا المنشور عليها'
+                );
                 break;
         }
     }, [language]);
@@ -120,20 +128,21 @@ const Post = () => {
             <Box
                 sx={{
                     width: '300px',
-                    height: '275px',
+                    height: '100%',
                     backgroundColor: 'black',
                     borderRadius: '8px',
                     color: 'white',
                     textAlign: 'center',
-                    padding: '16px'
+                    padding: '8px'
                 }}
             >
-                <img src={currPostURL} width="300px" />
+                {/* <img src={currPostURL} width="300px" /> */}
                 {/* <InstagramEmbed
                     url="https://www.instagram.com/p/EXAMPLE/" // Replace with the URL of the Instagram post you want to embed
                     maxWidth={320} // Adjust the width as needed
                     hideCaption={false} // Set to true to hide the post caption
                 /> */}
+                <iframe id="iframe" height="100%" src={`${EXAMPLE_IMG_URL}/embed`}></iframe>
             </Box>
             <Box
                 id="buttons"
