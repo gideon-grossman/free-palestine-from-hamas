@@ -3,11 +3,12 @@ import { Box } from '@mui/material';
 const Footer = () => (
     <Box
         sx={{
-            height: '16px',
+            height: '24px',
             backgroundColor: 'black',
             color: 'white',
             padding: '16px',
-            textAlign: 'center'
+            textAlign: 'center',
+            fontSize: '12px'
         }}
     >
         2023 • FreePalestineFromHamas.info
