@@ -1,16 +1,12 @@
 import { Box, Button } from '@mui/material';
 import { useState } from 'react';
+import { useLanguage } from 'contexts/language';
 
 const LanguagePicker = () => {
-    enum LANGUAGES {
-        ENGLISH = 'En',
-        HEBREW = 'עב'
-    }
-    const [language, setLanguage] = useState<string>('En');
-
+    const { language, setLanguage } = useLanguage();
     const changeLanguage = () => {
-        if (language === 'En') setLanguage('עב');
-        else if (language === 'עב') setLanguage('En');
+        if (language === 'En') setLanguage('עִב');
+        else if (language === 'עִב') setLanguage('En');
     };
 
     return (

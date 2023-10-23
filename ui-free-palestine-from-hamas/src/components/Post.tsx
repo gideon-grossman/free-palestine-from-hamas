@@ -21,6 +21,10 @@ import {
     LinkedinShareButton
 } from 'react-share';
 import { SocialIcon } from 'react-social-icons';
+import { useEffect } from 'react';
+import { useLanguage } from 'contexts/language';
+// import InstagramEmbed from 'react-instagram-embed';
+// import 'react-instagram-embed/dist/index.css';
 
 const StyledButton = styled(Button)(() => ({
     backgroundColor: 'black',
@@ -51,9 +55,31 @@ const Hashtag = () => (
 const EXAMPLE_IMG_URL =
     'https://www.livemint.com/lm-img/img/2023/10/10/600x338/California-Israel-Palestinians-2_1696901506265_1696901545401.jpg';
 const Post = () => {
+    const { language } = useLanguage();
     const [shareModalOpen, setShareModalOpen] = useState<boolean>(false);
     const [currPostURL, setCurrPostURL] = useState<string>(EXAMPLE_IMG_URL);
-
+    const [nextText, setNextText] = useState<string>('');
+    const [shareText, setShareText] = useState<string>('');
+    const [choosePlatformText, setChoosePlatformText] = useState<string>('');
+    const [choosePlatformDesc, setChoosePlatformDesc] = useState<string>('');
+    useEffect(() => {
+        switch (language) {
+            case 'En':
+                setNextText('next');
+                setShareText('Share');
+                setChoosePlatformText('Choose Platform');
+                setChoosePlatformDesc(
+                    "Select the social media platform where you'd like to share this post."
+                );
+                break;
+            case 'עִב':
+                setNextText('הַבָּא');
+                setShareText('שתפו');
+                setChoosePlatformText('בחר פלטפורמה');
+                setChoosePlatformDesc('בחר את פלטפורמת המדיה החברתית שבה תרצה לשתף את הפוסט הזה.');
+                break;
+        }
+    }, [language]);
     const ShareModal = () => (
         <Dialog
             open={shareModalOpen}
@@ -61,10 +87,10 @@ const Post = () => {
             aria-labelledby="alert-dialog-title"
             aria-describedby="alert-dialog-description"
         >
-            <DialogTitle id="alert-dialog-title">{'Choose a platform.'}</DialogTitle>
+            <DialogTitle id="alert-dialog-title">{choosePlatformText}</DialogTitle>
             <DialogContent>
                 <DialogContentText id="alert-dialog-description">
-                    Select the social media platform where you'd like to share this post.
+                    {choosePlatformDesc}
                 </DialogContentText>
             </DialogContent>
 
@@ -103,6 +129,11 @@ const Post = () => {
                 }}
             >
                 <img src={currPostURL} width="300px" />
+                {/* <InstagramEmbed
+                    url="https://www.instagram.com/p/EXAMPLE/" // Replace with the URL of the Instagram post you want to embed
+                    maxWidth={320} // Adjust the width as needed
+                    hideCaption={false} // Set to true to hide the post caption
+                /> */}
             </Box>
             <Box
                 id="buttons"
@@ -116,11 +147,11 @@ const Post = () => {
                 }}
             >
                 <StyledButton>
-                    <Box sx={{ marginRight: '16px' }}>next</Box>
+                    <Box sx={{ marginRight: '16px' }}>{nextText}</Box>
                     <LoopIcon />
                 </StyledButton>
                 <StyledButton onClick={() => setShareModalOpen(true)}>
-                    <Box sx={{ marginRight: '16px' }}>share</Box>
+                    <Box sx={{ marginRight: '16px' }}>{shareText}</Box>
                     <ShareIcon />
                 </StyledButton>
             </Box>
