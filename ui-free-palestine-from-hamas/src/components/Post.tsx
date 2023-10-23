@@ -23,8 +23,6 @@ import {
 import { SocialIcon } from 'react-social-icons';
 import { useEffect } from 'react';
 import { useLanguage } from 'contexts/language';
-// import InstagramEmbed from 'react-instagram-embed';
-// import 'react-instagram-embed/dist/index.css';
 
 const StyledButton = styled(Button)(() => ({
     backgroundColor: 'black',
@@ -136,12 +134,6 @@ const Post = () => {
                     padding: '8px'
                 }}
             >
-                {/* <img src={currPostURL} width="300px" /> */}
-                {/* <InstagramEmbed
-                    url="https://www.instagram.com/p/EXAMPLE/" // Replace with the URL of the Instagram post you want to embed
-                    maxWidth={320} // Adjust the width as needed
-                    hideCaption={false} // Set to true to hide the post caption
-                /> */}
                 <iframe id="iframe" height="100%" src={`${EXAMPLE_IMG_URL}/embed`}></iframe>
             </Box>
             <Box
