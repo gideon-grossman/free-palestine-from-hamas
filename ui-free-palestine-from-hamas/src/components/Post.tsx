@@ -119,7 +119,7 @@ const Post = () => {
         <Box sx={{ display: 'flex', flexDirection: 'column' }}>
             <Box
                 sx={{
-                    width: '380px',
+                    width: '300px',
                     height: '275px',
                     backgroundColor: 'black',
                     borderRadius: '8px',
