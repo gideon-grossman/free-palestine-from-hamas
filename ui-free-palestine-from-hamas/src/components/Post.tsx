@@ -23,6 +23,7 @@ import {
 import { SocialIcon } from 'react-social-icons';
 import { useEffect } from 'react';
 import { useLanguage } from 'contexts/language';
+import posts from 'postURLs';
 
 const StyledButton = styled(Button)(() => ({
     backgroundColor: 'black',
@@ -50,16 +51,18 @@ const Hashtag = () => (
     </Box>
 );
 
-const EXAMPLE_IMG_URL = 'https://www.instagram.com/p/CygHf89IzuK';
-// 'https://www.livemint.com/lm-img/img/2023/10/10/600x338/California-Israel-Palestinians-2_1696901506265_1696901545401.jpg';
 const Post = () => {
     const { language } = useLanguage();
     const [shareModalOpen, setShareModalOpen] = useState<boolean>(false);
-    const [currPostURL, setCurrPostURL] = useState<string>(EXAMPLE_IMG_URL);
     const [nextText, setNextText] = useState<string>('');
     const [shareText, setShareText] = useState<string>('');
     const [choosePlatformText, setChoosePlatformText] = useState<string>('');
     const [choosePlatformDesc, setChoosePlatformDesc] = useState<string>('');
+    const [postIndex, setPostIndex] = useState<number>(0);
+    const advanceToNextPost = () => {
+        setPostIndex((postIndex + 1) % posts.length);
+    };
+    const currPostURL = posts[postIndex];
     useEffect(() => {
         switch (language) {
             case 'En':
@@ -114,7 +117,7 @@ const Post = () => {
                 <TwitterShareButton url={currPostURL}>
                     <TwitterIcon size={32} round />
                 </TwitterShareButton>
-                <LinkedinShareButton url={EXAMPLE_IMG_URL}>
+                <LinkedinShareButton url={currPostURL}>
                     <LinkedinIcon size={32} round />
                 </LinkedinShareButton>
             </DialogActions>
@@ -134,7 +137,7 @@ const Post = () => {
                     padding: '8px'
                 }}
             >
-                <iframe id="iframe" height="100%" src={`${EXAMPLE_IMG_URL}/embed`}></iframe>
+                <iframe id="iframe" height="100%" src={`${currPostURL}/embed`}></iframe>
             </Box>
             <Box
                 id="buttons"
@@ -147,7 +150,7 @@ const Post = () => {
                     gap: '32px'
                 }}
             >
-                <StyledButton>
+                <StyledButton onClick={() => advanceToNextPost()}>
                     <Box sx={{ marginRight: '16px' }}>{nextText}</Box>
                     <LoopIcon />
                 </StyledButton>
