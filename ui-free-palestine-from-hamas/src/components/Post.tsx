@@ -154,7 +154,25 @@ const Post = () => {
                     <Box sx={{ marginRight: '16px' }}>{nextText}</Box>
                     <LoopIcon />
                 </StyledButton>
-                <StyledButton onClick={() => setShareModalOpen(true)}>
+                <StyledButton
+                    id="shareButton"
+                    onClick={() => {
+                        if (navigator.share) {
+                            navigator
+                                .share({
+                                    title: 'Share this image',
+                                    text: 'Check out this image!',
+                                    url: 'https://your-website.com/your-image.png'
+                                })
+                                .then(() => console.log('Successfully shared'))
+                                .catch((error) => console.error('Error sharing:', error));
+                        } else {
+                            // Fallback for browsers that do not support the Web Share API
+                            setShareModalOpen(true);
+                            alert('not supported');
+                        }
+                    }}
+                >
                     <Box sx={{ marginRight: '16px' }}>{shareText}</Box>
                     <ShareIcon />
                 </StyledButton>
