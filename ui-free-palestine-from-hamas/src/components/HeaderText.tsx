@@ -9,16 +9,16 @@ const HeaderText = () => {
     useEffect(() => {
         switch (language) {
             case 'En':
-                setHeaderText('The conflict is complicated.');
-                setHeaderSubtext('Terorism is not.');
+                setHeaderText('The conflict is complicated');
+                setHeaderSubtext('Terrorism is not');
                 break;
             case 'עִב':
-                setHeaderText('.הסכסוך הוא מסובך');
-                setHeaderSubtext('.טרור זה לא');
+                setHeaderText('עוזרים לעולם להבין');
+                setHeaderSubtext('לטרור אין צדדים');
                 break;
             case 'عربي':
-                setHeaderText('.الصراع معقد');
-                setHeaderSubtext('.الإرهاب ليس كذلك');
+                setHeaderText('لا مستقبل مع القيادة الإرهابية');
+                setHeaderSubtext('');
         }
     }, [language]);
 
