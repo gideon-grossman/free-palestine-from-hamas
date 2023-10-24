@@ -160,9 +160,9 @@ const Post = () => {
                         if (navigator.share) {
                             navigator
                                 .share({
-                                    title: 'Share this image',
-                                    text: 'Check out this image!',
-                                    url: 'https://your-website.com/your-image.png'
+                                    title: 'Share this post',
+                                    text: '#FreePalestineFromHamas',
+                                    url: currPostURL
                                 })
                                 .then(() => console.log('Successfully shared'))
                                 .catch((error) => console.error('Error sharing:', error));
