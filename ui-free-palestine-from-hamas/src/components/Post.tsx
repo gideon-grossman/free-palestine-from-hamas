@@ -167,9 +167,7 @@ const Post = () => {
                                 .then(() => console.log('Successfully shared'))
                                 .catch((error) => console.error('Error sharing:', error));
                         } else {
-                            // Fallback for browsers that do not support the Web Share API
                             setShareModalOpen(true);
-                            alert('not supported');
                         }
                     }}
                 >
