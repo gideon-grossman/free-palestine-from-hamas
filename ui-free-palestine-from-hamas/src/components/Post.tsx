@@ -120,10 +120,10 @@ const Post = () => {
                             style={{ width: '32px', height: '32px' }}
                         />
                     </IconButton> */}
-                    <FacebookShareButton url={currPostURL}>
+                    <FacebookShareButton hashtag={'freepalestinefromhamas'} url={currPostURL}>
                         <FacebookIcon size={32} round />
                     </FacebookShareButton>
-                    <TwitterShareButton url={currPostURL}>
+                    <TwitterShareButton hashtags={['freepalestinefromhamas']} url={currPostURL}>
                         <TwitterIcon size={32} round />
                     </TwitterShareButton>
                     <LinkedinShareButton url={currPostURL}>
