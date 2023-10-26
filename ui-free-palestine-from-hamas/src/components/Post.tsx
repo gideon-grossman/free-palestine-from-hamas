@@ -103,23 +103,45 @@ const Post = () => {
                 </DialogContentText>
             </DialogContent>
 
-            <DialogActions sx={{ display: 'flex', justifyContent: 'center' }}>
-                <IconButton sx={{ width: '50px' }} onClick={() => setShareModalOpen(false)}>
-                    <SocialIcon
-                        url="https://instagram.com"
-                        href="https://instagram.com"
-                        style={{ width: '32px', height: '32px' }}
-                    />
-                </IconButton>
-                <FacebookShareButton url={currPostURL}>
-                    <FacebookIcon size={32} round />
-                </FacebookShareButton>
-                <TwitterShareButton url={currPostURL}>
-                    <TwitterIcon size={32} round />
-                </TwitterShareButton>
-                <LinkedinShareButton url={currPostURL}>
-                    <LinkedinIcon size={32} round />
-                </LinkedinShareButton>
+            <DialogActions
+                sx={{ display: 'flex', flexDirection: 'column', justifyContent: 'center' }}
+            >
+                <Box sx={{ display: 'flex', justifyContent: 'center' }}>
+                    <IconButton sx={{ width: '50px' }} onClick={() => setShareModalOpen(false)}>
+                        <SocialIcon
+                            url="https://instagram.com"
+                            href="https://instagram.com"
+                            style={{ width: '32px', height: '32px' }}
+                        />
+                    </IconButton>
+                    <FacebookShareButton url={currPostURL}>
+                        <FacebookIcon size={32} round />
+                    </FacebookShareButton>
+                    <TwitterShareButton url={currPostURL}>
+                        <TwitterIcon size={32} round />
+                    </TwitterShareButton>
+                    <LinkedinShareButton url={currPostURL}>
+                        <LinkedinIcon size={32} round />
+                    </LinkedinShareButton>
+                </Box>
+                {navigator.share && (
+                    <Box sx={{ marginTop: 0 }}>
+                        <StyledButton
+                            onClick={() => {
+                                navigator
+                                    .share({
+                                        title: 'Share this post',
+                                        text: '#FreePalestineFromHamas',
+                                        url: currPostURL
+                                    })
+                                    .then(() => console.log('Successfully shared'))
+                                    .catch((error) => console.error('Error sharing:', error));
+                            }}
+                        >
+                            More Sharing Options
+                        </StyledButton>
+                    </Box>
+                )}
             </DialogActions>
         </Dialog>
     );
@@ -154,23 +176,7 @@ const Post = () => {
                     <Box sx={{ marginRight: '16px' }}>{nextText}</Box>
                     <LoopIcon />
                 </StyledButton>
-                <StyledButton
-                    id="shareButton"
-                    onClick={() => {
-                        if (navigator.share) {
-                            navigator
-                                .share({
-                                    title: 'Share this post',
-                                    text: '#FreePalestineFromHamas',
-                                    url: currPostURL
-                                })
-                                .then(() => console.log('Successfully shared'))
-                                .catch((error) => console.error('Error sharing:', error));
-                        } else {
-                            setShareModalOpen(true);
-                        }
-                    }}
-                >
+                <StyledButton id="shareButton" onClick={() => setShareModalOpen(true)}>
                     <Box sx={{ marginRight: '16px' }}>{shareText}</Box>
                     <ShareIcon />
                 </StyledButton>
