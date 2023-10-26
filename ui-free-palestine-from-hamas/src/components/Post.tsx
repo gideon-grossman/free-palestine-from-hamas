@@ -106,14 +106,20 @@ const Post = () => {
             <DialogActions
                 sx={{ display: 'flex', flexDirection: 'column', justifyContent: 'center' }}
             >
-                <Box sx={{ display: 'flex', justifyContent: 'center' }}>
-                    <IconButton sx={{ width: '50px' }} onClick={() => setShareModalOpen(false)}>
+                <Box
+                    sx={{
+                        display: 'flex',
+                        justifyContent: 'center',
+                        gap: '16px'
+                    }}
+                >
+                    {/* <IconButton sx={{ width: '50px' }} onClick={() => setShareModalOpen(false)}>
                         <SocialIcon
                             url="https://instagram.com"
                             href="https://instagram.com"
                             style={{ width: '32px', height: '32px' }}
                         />
-                    </IconButton>
+                    </IconButton> */}
                     <FacebookShareButton url={currPostURL}>
                         <FacebookIcon size={32} round />
                     </FacebookShareButton>
@@ -127,6 +133,7 @@ const Post = () => {
                 {navigator.share && (
                     <Box sx={{ marginTop: 0 }}>
                         <StyledButton
+                            sx={{ marginLeft: '-8px' }}
                             onClick={() => {
                                 navigator
                                     .share({
