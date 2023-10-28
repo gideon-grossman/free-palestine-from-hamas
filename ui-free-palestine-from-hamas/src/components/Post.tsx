@@ -137,8 +137,8 @@ const Post = () => {
                             onClick={() => {
                                 navigator
                                     .share({
-                                        title: 'Share this post',
-                                        text: '#FreePalestineFromHamas',
+                                        // title: 'Share this post',
+                                        // text: '#FreePalestineFromHamas',
                                         url: currPostURL
                                     })
                                     .then(() => console.log('Successfully shared'))
