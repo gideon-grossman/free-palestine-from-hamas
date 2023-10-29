@@ -36,3 +36,18 @@
         transform: rotate(360deg);
     }
 }
+
+/* styles.css (or your CSS file) */
+@keyframes reduceWidth {
+    0% {
+        width: 100px; /* Initial width, adjust this value to match your initial width */
+    }
+    100% {
+        width: 40px; /* Final width */
+    }
+}
+
+.logo {
+    animation: reduceWidth 0.5s linear 2s forwards; /* 0.5s animation duration, 1s delay */
+    width: 260px; /* Initial width */
+}

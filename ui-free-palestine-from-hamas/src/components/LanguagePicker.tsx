@@ -11,7 +11,14 @@ const LanguagePicker = () => {
     };
 
     return (
-        <Box sx={{ display: 'flex', height: 'fit-content', justifyContent: 'space-between' }}>
+        <Box
+            sx={{
+                display: 'flex',
+                height: 'fit-content',
+                justifyContent: 'space-between',
+                flex: 1
+            }}
+        >
             <Button onClick={() => changeLanguage()} variant="outlined">
                 {language}
             </Button>

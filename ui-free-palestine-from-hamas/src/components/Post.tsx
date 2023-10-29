@@ -159,9 +159,10 @@ const Post = () => {
     return (
         <Box sx={{ display: 'flex', flexDirection: 'column' }}>
             <Box
+                id="iframe-wrapper"
                 sx={{
                     width: '300px',
-                    height: '100%',
+                    height: '450px',
                     backgroundColor: 'black',
                     borderRadius: '8px',
                     color: 'white',
@@ -170,7 +171,13 @@ const Post = () => {
                 }}
             >
                 {isTiktokPost(currPostURL) ? (
-                    <div style={{ display: 'flex', justifyContent: 'center' }}>
+                    <div
+                        style={{
+                            justifyContent: 'center',
+                            overflowY: 'scroll',
+                            height: '100%'
+                        }}
+                    >
                         <TikTokPost />
                     </div>
                 ) : (
