@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useMemo, useState } from 'react';
 import {
     Box,
     Button,
@@ -24,6 +24,7 @@ import { SocialIcon } from 'react-social-icons';
 import { useEffect } from 'react';
 import { useLanguage } from 'contexts/language';
 import posts from 'postURLs';
+import { TikTokEmbed } from 'react-social-media-embed';
 
 const StyledButton = styled(Button)(() => ({
     backgroundColor: 'black',
@@ -153,6 +154,8 @@ const Post = () => {
         </Dialog>
     );
 
+    const isTiktokPost = (url: string) => url.includes('tiktok');
+    const TikTokPost = () => <TikTokEmbed url={currPostURL} width={325} />;
     return (
         <Box sx={{ display: 'flex', flexDirection: 'column' }}>
             <Box
@@ -166,7 +169,13 @@ const Post = () => {
                     padding: '8px'
                 }}
             >
-                <iframe id="iframe" height="100%" src={`${currPostURL}/embed`}></iframe>
+                {isTiktokPost(currPostURL) ? (
+                    <div style={{ display: 'flex', justifyContent: 'center' }}>
+                        <TikTokPost />
+                    </div>
+                ) : (
+                    <iframe id="iframe" height="100%" src={`${currPostURL}/embed`}></iframe>
+                )}
             </Box>
             <Box
                 id="buttons"
