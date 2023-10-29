@@ -9,8 +9,8 @@ const HeaderText = () => {
     useEffect(() => {
         switch (language) {
             case 'En':
-                setHeaderText('The conflict is complicated');
-                setHeaderSubtext('Terrorism is not');
+                setHeaderText('The conflict is complicated.');
+                setHeaderSubtext('Terrorism is not.');
                 break;
             case 'עִב':
                 setHeaderText('עוזרים לעולם להבין');
