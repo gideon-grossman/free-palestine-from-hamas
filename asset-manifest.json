@@ -1,16 +1,16 @@
 {
   "files": {
-    "main.css": "/free-palestine-from-hamas/static/css/main.073c9b0a.css",
-    "main.js": "/free-palestine-from-hamas/static/js/main.2830ae8c.js",
-    "static/js/787.2ca34c95.chunk.js": "/free-palestine-from-hamas/static/js/787.2ca34c95.chunk.js",
-    "static/media/fpfh_logo.png": "/free-palestine-from-hamas/static/media/fpfh_logo.0eb9952a4adb95a3a7af.png",
-    "index.html": "/free-palestine-from-hamas/index.html",
-    "main.073c9b0a.css.map": "/free-palestine-from-hamas/static/css/main.073c9b0a.css.map",
-    "main.2830ae8c.js.map": "/free-palestine-from-hamas/static/js/main.2830ae8c.js.map",
-    "787.2ca34c95.chunk.js.map": "/free-palestine-from-hamas/static/js/787.2ca34c95.chunk.js.map"
+    "main.css": "/static/css/main.073c9b0a.css",
+    "main.js": "/static/js/main.89596aa5.js",
+    "static/js/787.2ca34c95.chunk.js": "/static/js/787.2ca34c95.chunk.js",
+    "static/media/fpfh_logo.png": "/static/media/fpfh_logo.0eb9952a4adb95a3a7af.png",
+    "index.html": "/index.html",
+    "main.073c9b0a.css.map": "/static/css/main.073c9b0a.css.map",
+    "main.89596aa5.js.map": "/static/js/main.89596aa5.js.map",
+    "787.2ca34c95.chunk.js.map": "/static/js/787.2ca34c95.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.073c9b0a.css",
-    "static/js/main.2830ae8c.js"
+    "static/js/main.89596aa5.js"
   ]
 }
