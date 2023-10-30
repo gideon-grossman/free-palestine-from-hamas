@@ -6,7 +6,7 @@ const Footer = () => (
             height: '20px',
             backgroundColor: 'black',
             color: 'white',
-            padding: '16px',
+            padding: '12px',
             textAlign: 'center',
             fontSize: '12px',
             display: 'flex',
