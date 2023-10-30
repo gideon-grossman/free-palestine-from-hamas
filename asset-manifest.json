@@ -1,16 +1,16 @@
 {
   "files": {
     "main.css": "/static/css/main.ba76a2ae.css",
-    "main.js": "/static/js/main.705b0dee.js",
+    "main.js": "/static/js/main.2271d3c1.js",
     "static/js/787.2ca34c95.chunk.js": "/static/js/787.2ca34c95.chunk.js",
     "static/media/fpfh_logo.png": "/static/media/fpfh_logo.0eb9952a4adb95a3a7af.png",
     "index.html": "/index.html",
     "main.ba76a2ae.css.map": "/static/css/main.ba76a2ae.css.map",
-    "main.705b0dee.js.map": "/static/js/main.705b0dee.js.map",
+    "main.2271d3c1.js.map": "/static/js/main.2271d3c1.js.map",
     "787.2ca34c95.chunk.js.map": "/static/js/787.2ca34c95.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.ba76a2ae.css",
-    "static/js/main.705b0dee.js"
+    "static/js/main.2271d3c1.js"
   ]
 }
