@@ -40,7 +40,7 @@
 /* styles.css (or your CSS file) */
 @keyframes reduceWidth {
     0% {
-        width: 100px; /* Initial width, adjust this value to match your initial width */
+        width: 180px; /* Initial width, adjust this value to match your initial width */
     }
     100% {
         width: 40px; /* Final width */
@@ -50,4 +50,18 @@
 .logo {
     animation: reduceWidth 0.5s linear 2s forwards; /* 0.5s animation duration, 1s delay */
     width: 180px; /* Initial width */
+}
+
+@keyframes reduceHeaderFontSize {
+    0% {
+        font-size: 24px;
+    }
+    100% {
+        font-size: 12px;
+    }
+}
+
+.headerText {
+    animation: reduceHeaderFontSize 0.5s linear 2s forwards;
+    font-size: 24px;
 }

@@ -32,8 +32,10 @@ const HeaderText = () => {
                 gap: '8px'
             }}
         >
-            <Box sx={{ textAlign: 'center', fontSize: '24px' }}>{headerText}</Box>
-            <Box sx={{ fontWeight: '800', textAlign: 'center', fontSize: '24px' }}>
+            <Box sx={{ textAlign: 'center' }} className={'headerText'}>
+                {headerText}
+            </Box>
+            <Box sx={{ fontWeight: '800', textAlign: 'center' }} className={'headerText'}>
                 {headerSubtext}
             </Box>
         </Box>
