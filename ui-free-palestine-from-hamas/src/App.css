@@ -49,5 +49,5 @@
 
 .logo {
     animation: reduceWidth 0.5s linear 2s forwards; /* 0.5s animation duration, 1s delay */
-    width: 260px; /* Initial width */
+    width: 180px; /* Initial width */
 }

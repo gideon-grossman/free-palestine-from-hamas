@@ -162,7 +162,7 @@ const Post = () => {
                 id="iframe-wrapper"
                 sx={{
                     width: '300px',
-                    height: '450px',
+                    height: 'calc(100vh - 300px)',
                     backgroundColor: 'black',
                     borderRadius: '8px',
                     color: 'white',
