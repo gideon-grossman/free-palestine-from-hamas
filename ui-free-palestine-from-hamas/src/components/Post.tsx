@@ -155,7 +155,7 @@ const Post = () => {
     );
 
     const isTiktokPost = (url: string) => url.includes('tiktok');
-    const TikTokPost = () => <TikTokEmbed url={currPostURL} width={325} />;
+    const TikTokPost = () => <TikTokEmbed url={currPostURL} width={325} linkText="Loading" />;
     return (
         <Box sx={{ display: 'flex', flexDirection: 'column' }}>
             <Box
